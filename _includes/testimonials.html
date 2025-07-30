@@ -1,0 +1,40 @@
+<section class="testimonials-section">
+    <div class="container">
+        {% if include.title %}
+        <div class="section-header">
+            <h2>{{ include.title }}</h2>
+            {% if include.subtitle %}
+            <p>{{ include.subtitle }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="card-grid">
+            {% for testimonial in include.testimonials %}
+            <div class="card testimonial-card">
+                <div class="review-stars">
+                    {% for i in (1..5) %}
+                    <span class="star{% if i > testimonial.rating %} empty{% endif %}">★</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="quote">
+                    {{ testimonial.quote }}
+                </div>
+                
+                <div class="author">
+                    {% if testimonial.avatar %}
+                    <img src="{{ testimonial.avatar }}" alt="{{ testimonial.name }}" class="avatar">
+                    {% else %}
+                    <div class="avatar"></div>
+                    {% endif %}
+                    <div class="info">
+                        <div class="name">{{ testimonial.name }}</div>
+                        <div class="title">{{ testimonial.title }}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

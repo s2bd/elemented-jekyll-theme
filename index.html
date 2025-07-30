@@ -1,0 +1,135 @@
+---
+layout: landing
+title: "Elemented - Jekyll Theme with 200+ Components"
+description: "Professional Jekyll theme with 200+ reusable components, multiple layouts, and shortcode-like snippets for easy customization."
+---
+
+{% include hero.html 
+   title="Build Amazing Websites with 200+ Components" 
+   subtitle="Professional Jekyll theme with reusable components, multiple layouts, and shortcode-like snippets for rapid development."
+   buttons=site.data.hero_buttons
+%}
+
+<section class="features-section">
+    <div class="container">
+        <div class="section-header text-center mb-6">
+            <h2>Everything You Need to Build Professional Websites</h2>
+            <p>From simple landing pages to complex multi-page sites, Elemented has you covered.</p>
+        </div>
+        
+        <div class="grid grid-3">
+            <div class="card feature-card">
+                <div class="icon">🧩</div>
+                <h3>200+ Components</h3>
+                <p>Extensive library of pre-built components including headers, footers, cards, forms, galleries, and more.</p>
+            </div>
+            
+            <div class="card feature-card">
+                <div class="icon">⚡</div>
+                <h3>Easy Integration</h3>
+                <p>Simple shortcode-like snippets make it easy to add components anywhere in your content.</p>
+            </div>
+            
+            <div class="card feature-card">
+                <div class="icon">📱</div>
+                <h3>Fully Responsive</h3>
+                <p>All components are mobile-first and look great on any device or screen size.</p>
+            </div>
+            
+            <div class="card feature-card">
+                <div class="icon">🎨</div>
+                <h3>Customizable Design</h3>
+                <p>Easy-to-customize CSS variables and SCSS files for complete design control.</p>
+            </div>
+            
+            <div class="card feature-card">
+                <div class="icon">🚀</div>
+                <h3>Performance Optimized</h3>
+                <p>Lightweight, fast-loading components built with modern web standards.</p>
+            </div>
+            
+            <div class="card feature-card">
+                <div class="icon">📚</div>
+                <h3>Comprehensive Docs</h3>
+                <p>Detailed documentation with examples for every component and layout.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="showcase-section" style="background: var(--background-light); padding: 4rem 0;">
+    <div class="container">
+        <div class="section-header text-center mb-6">
+            <h2>Component Categories</h2>
+            <p>Explore our extensive collection of professionally designed components</p>
+        </div>
+        
+        <div class="grid grid-4">
+            <div class="card">
+                <h4>🧭 Navigation</h4>
+                <p>Headers, menus, breadcrumbs, pagination, tabs, and sidebar navigation components.</p>
+                <a href="/components/#navigation" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>🎯 Content</h4>
+                <p>Hero sections, feature blocks, testimonials, pricing tables, and content layouts.</p>
+                <a href="/components/#content" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>📝 Forms</h4>
+                <p>Contact forms, newsletter signups, search bars, and interactive form elements.</p>
+                <a href="/components/#forms" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>🖼️ Media</h4>
+                <p>Image galleries, video players, carousels, and media showcase components.</p>
+                <a href="/components/#media" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>📊 Data</h4>
+                <p>Charts, statistics, progress bars, and data visualization components.</p>
+                <a href="/components/#data" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>🛒 E-commerce</h4>
+                <p>Product cards, shopping carts, checkout forms, and store layouts.</p>
+                <a href="/components/#ecommerce" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>📱 Social</h4>
+                <p>Social media feeds, share buttons, user profiles, and community features.</p>
+                <a href="/components/#social" class="btn btn-outline">View Components</a>
+            </div>
+            
+            <div class="card">
+                <h4>⚙️ Utilities</h4>
+                <p>Alerts, modals, tooltips, loading states, and utility components.</p>
+                <a href="/components/#utilities" class="btn btn-outline">View Components</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include testimonials.html 
+   title="Loved by Developers Worldwide"
+   subtitle="See what developers are saying about Elemented"
+   testimonials=site.data.testimonials
+%}
+
+{% include pricing.html 
+   title="Choose Your Plan"
+   subtitle="Get started with Elemented today"
+   plans=site.data.pricing_plans
+%}
+
+{% include cta.html 
+   title="Ready to Build Something Amazing?"
+   subtitle="Download Elemented and start creating professional websites in minutes."
+   buttons=site.data.cta_buttons
+%}

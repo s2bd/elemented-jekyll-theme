@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<div class="blog-header">
+    <div class="container">
+        <h1>{{ page.title | default: "Blog" }}</h1>
+        {% if page.description %}
+        <p>{{ page.description }}</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="blog-content">
+    <div class="container">
+        {{ content }}
+        
+        <div class="blog-grid">
+            {% for post in paginator.posts %}
+            <article class="blog-card">
+                {% if post.featured_image %}
+                <div class="blog-image">
+                    <a href="{{ post.url | relative_url }}">
+                        <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+                    </a>
+                </div>
+                {% endif %}
+                
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                        {% if post.category %}
+                        <span class="category">{{ post.category }}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    
+                    <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    
+                    <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        {% if paginator.total_pages > 1 %}
+        <nav class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+            {% endif %}
+            
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <span class="current">{{ page }}</span>
+            {% elsif page == 1 %}
+            <a href="{{ '/' | relative_url }}">{{ page }}</a>
+            {% else %}
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+            {% endfor %}
+            
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    </div>
+</div>

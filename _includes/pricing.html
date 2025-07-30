@@ -1,0 +1,41 @@
+<section class="pricing-section">
+    <div class="container">
+        {% if include.title %}
+        <div class="section-header">
+            <h2>{{ include.title }}</h2>
+            {% if include.subtitle %}
+            <p>{{ include.subtitle }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="card-grid grid-3">
+            {% for plan in include.plans %}
+            <div class="card pricing-card{% if plan.featured %} featured{% endif %}">
+                {% if plan.featured %}
+                <div class="badge">{{ plan.badge | default: "Most Popular" }}</div>
+                {% endif %}
+                
+                <h3>{{ plan.name }}</h3>
+                
+                <div class="price">
+                    <span class="currency">$</span>{{ plan.price }}
+                    <span class="period">/{{ plan.period | default: "month" }}</span>
+                </div>
+                
+                <p>{{ plan.description }}</p>
+                
+                <ul class="features">
+                    {% for feature in plan.features %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                
+                <a href="{{ plan.url | default: '#' }}" class="btn{% if plan.featured %} btn-primary{% else %} btn-outline{% endif %}">
+                    {{ plan.button_text | default: "Get Started" }}
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

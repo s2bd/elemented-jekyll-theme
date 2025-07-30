@@ -1,0 +1,15 @@
+<div class="gallery{% if include.style == 'masonry' %} masonry-gallery{% endif %}">
+    {% for image in include.images %}
+    <div class="gallery-item">
+        <img src="{{ image.src }}" alt="{{ image.alt | default: image.title }}" loading="lazy">
+        {% if image.title or image.description %}
+        <div class="overlay">
+            <div class="overlay-content">
+                {% if image.title %}<h4>{{ image.title }}</h4>{% endif %}
+                {% if image.description %}<p>{{ image.description }}</p>{% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

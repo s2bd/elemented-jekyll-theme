@@ -1,0 +1,57 @@
+# Elemented Jekyll Theme Configuration
+title: "Elemented"
+description: "Jekyll theme with 200+ re-usable components and snippets"
+baseurl: ""
+url: "http://localhost:4000"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  components:
+    output: false
+  layouts:
+    output: false
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Theme settings
+theme_settings:
+  primary_color: "#3b82f6"
+  secondary_color: "#1e40af"
+  accent_color: "#f59e0b"
+  text_color: "#1f2937"
+  background_color: "#ffffff"
+  
+# Navigation
+navigation:
+  - name: "Home"
+    url: "/"
+  - name: "Components"
+    url: "/components/"
+  - name: "Layouts"
+    url: "/layouts/"
+  - name: "Documentation"
+    url: "/docs/"
+  - name: "Blog"
+    url: "/blog/"

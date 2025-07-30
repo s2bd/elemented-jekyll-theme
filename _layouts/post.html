@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<article class="blog-post">
+    <div class="container">
+        <header class="post-header">
+            <div class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                {% if page.author %}
+                <span>by {{ page.author }}</span>
+                {% endif %}
+                {% if page.category %}
+                <span class="category">{{ page.category }}</span>
+                {% endif %}
+            </div>
+            
+            <h1>{{ page.title }}</h1>
+            
+            {% if page.featured_image %}
+            <div class="featured-image">
+                <img src="{{ page.featured_image }}" alt="{{ page.title }}">
+            </div>
+            {% endif %}
+        </header>
+        
+        <div class="post-content">
+            {{ content }}
+        </div>
+        
+        <footer class="post-footer">
+            {% if page.tags %}
+            <div class="tags">
+                {% for tag in page.tags %}
+                <a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" class="share-btn twitter" target="_blank">Share on Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="share-btn facebook" target="_blank">Share on Facebook</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="share-btn linkedin" target="_blank">Share on LinkedIn</a>
+            </div>
+        </footer>
+        
+        {% if page.author_bio %}
+        {% include author-bio.html author=page.author %}
+        {% endif %}
+        
+        {% include related-posts.html %}
+    </div>
+</article>

@@ -1,0 +1,6 @@
+- text: "Download Free"
+  url: "/download/"
+  style: "white"
+- text: "View Documentation"
+  url: "/docs/"
+  style: "outline"

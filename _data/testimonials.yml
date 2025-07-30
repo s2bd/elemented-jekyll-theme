@@ -1,0 +1,17 @@
+- name: "Sarah Johnson"
+  title: "Frontend Developer"
+  quote: "Elemented saved me weeks of development time. The components are beautifully designed and easy to customize."
+  rating: 5
+  avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+
+- name: "Mike Chen"
+  title: "UI/UX Designer"
+  quote: "The variety of components is incredible. I can build any design I can imagine with these building blocks."
+  rating: 5
+  avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+
+- name: "Emily Rodriguez"
+  title: "Product Manager"
+  quote: "Our team loves how quickly we can prototype and build landing pages. The documentation is excellent too."
+  rating: 5
+  avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"

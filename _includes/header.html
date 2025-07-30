@@ -1,0 +1,19 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            </div>
+            
+            <nav class="main-nav">
+                {% for item in site.navigation %}
+                <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.name }}</a>
+                {% endfor %}
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>

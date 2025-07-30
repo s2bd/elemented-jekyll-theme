@@ -1,0 +1,400 @@
+---
+layout: page
+title: "Component Showcase"
+description: "Browse our complete collection of 200+ reusable components with live examples and code snippets."
+breadcrumb: true
+---
+
+<div class="component-showcase">
+    <div class="showcase-intro text-center mb-6">
+        <h2>200+ Professional Components</h2>
+        <p>Click on any component to see the code and implementation details.</p>
+    </div>
+    
+    <!-- Navigation Components -->
+    <section id="navigation" class="component-section">
+        <h2>🧭 Navigation Components</h2>
+        
+        <div class="component-grid">
+            <div class="component-demo">
+                <h4>Header with Logo & Menu</h4>
+                <div class="demo-preview">
+                    {% include header.html %}
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include header.html %}{% endraw %}</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Breadcrumb Navigation</h4>
+                <div class="demo-preview">
+                    <nav class="breadcrumb">
+                        <a href="/">Home</a>
+                        <span class="separator">/</span>
+                        <a href="/components/">Components</a>
+                        <span class="separator">/</span>
+                        <span>Navigation</span>
+                    </nav>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>&lt;nav class="breadcrumb"&gt;
+    &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;span class="separator"&gt;/&lt;/span&gt;
+    &lt;span&gt;Current Page&lt;/span&gt;
+&lt;/nav&gt;</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Pagination</h4>
+                <div class="demo-preview">
+                    <nav class="pagination">
+                        <a href="#">&laquo; Previous</a>
+                        <a href="#">1</a>
+                        <span class="current">2</span>
+                        <a href="#">3</a>
+                        <a href="#">Next &raquo;</a>
+                    </nav>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>&lt;nav class="pagination"&gt;
+    &lt;a href="#"&gt;&amp;laquo; Previous&lt;/a&gt;
+    &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;span class="current"&gt;2&lt;/span&gt;
+    &lt;a href="#"&gt;3&lt;/a&gt;
+    &lt;a href="#"&gt;Next &amp;raquo;&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Sidebar Navigation</h4>
+                <div class="demo-preview">
+                    <nav class="sidebar-nav">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#" class="active">Getting Started</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li><a href="#">Layouts</a></li>
+                            <li><a href="#">Customization</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>&lt;nav class="sidebar-nav"&gt;
+    &lt;h4&gt;Categories&lt;/h4&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#" class="active"&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Components&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content Components -->
+    <section id="content" class="component-section">
+        <h2>🎯 Content Components</h2>
+        
+        <div class="component-grid">
+            <div class="component-demo">
+                <h4>Hero Section</h4>
+                <div class="demo-preview">
+                    <div class="hero" style="padding: 2rem 0;">
+                        <div class="hero-content text-center">
+                            <h1 style="font-size: 2rem; margin-bottom: 1rem;">Welcome to Our Site</h1>
+                            <p style="margin-bottom: 1.5rem;">Build amazing websites with our components</p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn">Get Started</a>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include hero.html 
+   title="Welcome to Our Site"
+   subtitle="Build amazing websites with our components"
+   buttons=page.hero_buttons
+%}{% endraw %}</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Feature Cards</h4>
+                <div class="demo-preview">
+                    <div class="grid grid-3">
+                        <div class="card feature-card">
+                            <div class="icon">⚡</div>
+                            <h3>Fast</h3>
+                            <p>Lightning fast performance</p>
+                        </div>
+                        <div class="card feature-card">
+                            <div class="icon">🔒</div>
+                            <h3>Secure</h3>
+                            <p>Built with security in mind</p>
+                        </div>
+                        <div class="card feature-card">
+                            <div class="icon">📱</div>
+                            <h3>Responsive</h3>
+                            <p>Works on all devices</p>
+                        </div>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>&lt;div class="grid grid-3"&gt;
+    &lt;div class="card feature-card"&gt;
+        &lt;div class="icon"&gt;⚡&lt;/div&gt;
+        &lt;h3&gt;Fast&lt;/h3&gt;
+        &lt;p&gt;Lightning fast performance&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Testimonial Card</h4>
+                <div class="demo-preview">
+                    <div class="card testimonial-card">
+                        <div class="review-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="quote">
+                            This theme is absolutely amazing! It saved me hours of development time.
+                        </div>
+                        <div class="author">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <div class="name">John Doe</div>
+                                <div class="title">Web Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include testimonials.html 
+   testimonials=site.data.testimonials
+%}{% endraw %}</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Pricing Card</h4>
+                <div class="demo-preview">
+                    <div class="card pricing-card featured">
+                        <div class="badge">Popular</div>
+                        <h3>Pro Plan</h3>
+                        <div class="price">
+                            <span class="currency">$</span>29
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for growing businesses</p>
+                        <ul class="features">
+                            <li>Unlimited projects</li>
+                            <li>Priority support</li>
+                            <li>Advanced features</li>
+                        </ul>
+                        <a href="#" class="btn">Get Started</a>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include pricing.html 
+   plans=site.data.pricing_plans
+%}{% endraw %}</code></pre>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Form Components -->
+    <section id="forms" class="component-section">
+        <h2>📝 Form Components</h2>
+        
+        <div class="component-grid">
+            <div class="component-demo">
+                <h4>Contact Form</h4>
+                <div class="demo-preview">
+                    {% include contact-form.html title="Get in Touch" %}
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include contact-form.html 
+   title="Get in Touch"
+   show_phone=true
+   show_subject=true
+%}{% endraw %}</code></pre>
+                </details>
+            </div>
+            
+            <div class="component-demo">
+                <h4>Newsletter Signup</h4>
+                <div class="demo-preview">
+                    <div class="newsletter-signup">
+                        <h3>Stay Updated</h3>
+                        <p>Get the latest news and updates</p>
+                        <form class="form-inline">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>&lt;div class="newsletter-signup"&gt;
+    &lt;h3&gt;Stay Updated&lt;/h3&gt;
+    &lt;p&gt;Get the latest news and updates&lt;/p&gt;
+    &lt;form class="form-inline"&gt;
+        &lt;input type="email" placeholder="Your email"&gt;
+        &lt;button type="submit" class="btn"&gt;Subscribe&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Media Components -->
+    <section id="media" class="component-section">
+        <h2>🖼️ Media Components</h2>
+        
+        <div class="component-grid">
+            <div class="component-demo">
+                <h4>Image Gallery</h4>
+                <div class="demo-preview">
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Gallery Image 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Gallery Image 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Gallery Image 3">
+                        </div>
+                    </div>
+                </div>
+                <details class="code-snippet">
+                    <summary>View Code</summary>
+                    <pre><code>{% raw %}{% include gallery.html 
+   images=site.data.gallery_images
+%}{% endraw %}</code></pre>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="component-section">
+        <h2>📢 Call to Action</h2>
+        
+        <div class="component-demo">
+            <h4>CTA Section</h4>
+            <div class="demo-preview">
+                <div class="cta-section" style="padding: 2rem 0;">
+                    <div class="text-center">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Join thousands of developers using Elemented</p>
+                        <div class="cta-buttons">
+                            <a href="#" class="btn btn-white">Download Now</a>
+                            <a href="#" class="btn btn-outline">View Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <details class="code-snippet">
+                <summary>View Code</summary>
+                <pre><code>{% raw %}{% include cta.html 
+   title="Ready to Get Started?"
+   subtitle="Join thousands of developers using Elemented"
+   buttons=site.data.cta_buttons
+%}{% endraw %}</code></pre>
+            </details>
+        </div>
+    </section>
+</div>
+
+<style>
+.component-showcase {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.component-section {
+    margin: 4rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.component-section:last-child {
+    border-bottom: none;
+}
+
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.component-demo {
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.component-demo h4 {
+    background: var(--background-light);
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.demo-preview {
+    padding: 2rem;
+    background: white;
+}
+
+.code-snippet {
+    border-top: 1px solid var(--border-color);
+}
+
+.code-snippet summary {
+    padding: 1rem;
+    cursor: pointer;
+    background: var(--background-light);
+    font-weight: 600;
+}
+
+.code-snippet pre {
+    margin: 0;
+    padding: 1rem;
+    background: var(--text-color);
+    color: white;
+    overflow-x: auto;
+}
+
+.code-snippet code {
+    background: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

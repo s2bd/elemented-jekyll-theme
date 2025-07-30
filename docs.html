@@ -1,0 +1,448 @@
+---
+layout: page
+title: "Documentation"
+description: "Complete guide to using Elemented Jekyll theme components and features."
+breadcrumb: true
+sidebar: true
+---
+
+<div class="documentation">
+    <div class="doc-intro">
+        <h2>Getting Started with Elemented</h2>
+        <p>Learn how to use all 200+ components and create amazing websites with ease.</p>
+    </div>
+    
+    <section class="doc-section">
+        <h2>🚀 Quick Start</h2>
+        
+        <h3>Installation</h3>
+        <div class="code-block">
+            <pre><code># Clone the repository
+git clone https://github.com/your-username/elemented-jekyll-theme.git
+
+# Navigate to the directory
+cd elemented-jekyll-theme
+
+# Install dependencies
+bundle install
+
+# Start the development server
+bundle exec jekyll serve</code></pre>
+        </div>
+        
+        <h3>Basic Configuration</h3>
+        <p>Edit the <code>_config.yml</code> file to customize your site:</p>
+        
+        <div class="code-block">
+            <pre><code># Site settings
+title: "Your Site Name"
+description: "Your site description"
+baseurl: ""
+url: "https://yoursite.com"
+
+# Theme settings
+theme_settings:
+  primary_color: "#3b82f6"
+  secondary_color: "#1e40af"
+  accent_color: "#f59e0b"</code></pre>
+        </div>
+    </section>
+    
+    <section class="doc-section">
+        <h2>🧩 Using Components</h2>
+        
+        <p>Elemented uses Jekyll's include system to make components reusable. Here's how to use them:</p>
+        
+        <h3>Basic Syntax</h3>
+        <div class="code-block">
+            <pre><code>{% raw %}{% include component-name.html parameter="value" %}{% endraw %}</code></pre>
+        </div>
+        
+        <h3>Hero Section</h3>
+        <div class="component-doc">
+            <p>Create impressive hero sections with customizable content and buttons.</p>
+            
+            <div class="code-block">
+                <pre><code>{% raw %}{% include hero.html 
+   title="Welcome to My Site"
+   subtitle="Build amazing websites with ease"
+   size="large"
+   background_image="/assets/images/hero-bg.jpg"
+   buttons=page.hero_buttons
+%}{% endraw %}</code></pre>
+            </div>
+            
+            <div class="parameters">
+                <h4>Parameters:</h4>
+                <ul>
+                    <li><code>title</code> - Main heading text</li>
+                    <li><code>subtitle</code> - Subheading text</li>
+                    <li><code>size</code> - "normal" or "large"</li>
+                    <li><code>background_image</code> - Path to background image</li>
+                    <li><code>buttons</code> - Array of button objects</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Feature Grid</h3>
+        <div class="component-doc">
+            <p>Showcase features with icons, titles, and descriptions.</p>
+            
+            <div class="code-block">
+                <pre><code>{% raw %}{% include features.html 
+   title="Why Choose Us"
+   subtitle="Here's what makes us different"
+   features=site.data.features
+%}{% endraw %}</code></pre>
+            </div>
+            
+            <div class="parameters">
+                <h4>Data Structure (site.data.features):</h4>
+                <div class="code-block">
+                    <pre><code>- title: "Fast Performance"
+  description: "Lightning fast loading times"
+  icon: "⚡"
+- title: "Secure"
+  description: "Built with security in mind"
+  icon: "🔒"</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Testimonials</h3>
+        <div class="component-doc">
+            <p>Display customer testimonials with ratings and author information.</p>
+            
+            <div class="code-block">
+                <pre><code>{% raw %}{% include testimonials.html 
+   title="What Our Customers Say"
+   testimonials=site.data.testimonials
+%}{% endraw %}</code></pre>
+            </div>
+            
+            <div class="parameters">
+                <h4>Data Structure (site.data.testimonials):</h4>
+                <div class="code-block">
+                    <pre><code>- name: "John Doe"
+  title: "CEO, Company Inc"
+  quote: "This theme is absolutely amazing!"
+  rating: 5
+  avatar: "/assets/images/john-doe.jpg"</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Contact Form</h3>
+        <div class="component-doc">
+            <p>Add contact forms with customizable fields.</p>
+            
+            <div class="code-block">
+                <pre><code>{% raw %}{% include contact-form.html 
+   title="Get in Touch"
+   action="/contact/"
+   show_phone=true
+   show_subject=true
+   button_text="Send Message"
+%}{% endraw %}</code></pre>
+            </div>
+        </div>
+        
+        <h3>Image Gallery</h3>
+        <div class="component-doc">
+            <p>Create beautiful image galleries with lightbox functionality.</p>
+            
+            <div class="code-block">
+                <pre><code>{% raw %}{% include gallery.html 
+   images=site.data.gallery
+   style="masonry"
+%}{% endraw %}</code></pre>
+            </div>
+            
+            <div class="parameters">
+                <h4>Data Structure (site.data.gallery):</h4>
+                <div class="code-block">
+                    <pre><code>- src: "/assets/images/gallery-1.jpg"
+  alt: "Gallery Image 1"
+  title: "Beautiful Landscape"
+  description: "A stunning view of the mountains"</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="doc-section">
+        <h2>📄 Page Layouts</h2>
+        
+        <p>Elemented includes several pre-built layouts for different page types:</p>
+        
+        <h3>Landing Page Layout</h3>
+        <div class="code-block">
+            <pre><code>---
+layout: landing
+title: "My Landing Page"
+---
+
+{% raw %}{% include hero.html %}
+{% include features.html %}
+{% include testimonials.html %}
+{% include cta.html %}{% endraw %}</code></pre>
+        </div>
+        
+        <h3>Blog Layout</h3>
+        <div class="code-block">
+            <pre><code>---
+layout: blog
+title: "Blog"
+description: "Latest news and updates"
+---
+
+Additional content goes here...</code></pre>
+        </div>
+        
+        <h3>Page Layout with Sidebar</h3>
+        <div class="code-block">
+            <pre><code>---
+layout: page
+title: "About Us"
+sidebar: true
+breadcrumb: true
+---
+
+Page content goes here...</code></pre>
+        </div>
+    </section>
+    
+    <section class="doc-section">
+        <h2>🎨 Customization</h2>
+        
+        <h3>CSS Variables</h3>
+        <p>Customize colors and spacing using CSS variables:</p>
+        
+        <div class="code-block">
+            <pre><code>:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+  --accent-color: #f59e0b;
+  --text-color: #1f2937;
+  --background-color: #ffffff;
+}</code></pre>
+        </div>
+        
+        <h3>SCSS Customization</h3>
+        <p>Override default styles by editing <code>_sass/main.scss</code>:</p>
+        
+        <div class="code-block">
+            <pre><code>// Custom button styles
+.btn {
+  border-radius: 2rem;
+  font-weight: 700;
+  
+  &.btn-custom {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+  }
+}</code></pre>
+        </div>
+        
+        <h3>Creating Custom Components</h3>
+        <p>Create your own components in the <code>_includes</code> directory:</p>
+        
+        <div class="code-block">
+            <pre><code>&lt;!-- _includes/custom-component.html --&gt;
+&lt;div class="custom-component"&gt;
+    &lt;h3&gt;{{ include.title }}&lt;/h3&gt;
+    &lt;p&gt;{{ include.description }}&lt;/p&gt;
+    {% raw %}{% if include.button_text %}
+    &lt;a href="{{ include.button_url }}" class="btn"&gt;{{ include.button_text }}&lt;/a&gt;
+    {% endif %}{% endraw %}
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+    
+    <section class="doc-section">
+        <h2>📊 Data Files</h2>
+        
+        <p>Use YAML data files in the <code>_data</code> directory to manage content:</p>
+        
+        <h3>Navigation (_data/navigation.yml)</h3>
+        <div class="code-block">
+            <pre><code>- name: "Home"
+  url: "/"
+- name: "About"
+  url: "/about/"
+- name: "Services"
+  url: "/services/"
+  children:
+    - name: "Web Design"
+      url: "/services/web-design/"
+    - name: "Development"
+      url: "/services/development/"</code></pre>
+        </div>
+        
+        <h3>Team Members (_data/team.yml)</h3>
+        <div class="code-block">
+            <pre><code>- name: "John Doe"
+  position: "CEO & Founder"
+  bio: "John has over 10 years of experience..."
+  image: "/assets/images/team/john-doe.jpg"
+  social:
+    twitter: "https://twitter.com/johndoe"
+    linkedin: "https://linkedin.com/in/johndoe"</code></pre>
+        </div>
+    </section>
+    
+    <section class="doc-section">
+        <h2>🔧 Advanced Features</h2>
+        
+        <h3>SEO Optimization</h3>
+        <p>Elemented includes built-in SEO features:</p>
+        
+        <div class="code-block">
+            <pre><code>---
+title: "Page Title"
+description: "Page description for search engines"
+keywords: "keyword1, keyword2, keyword3"
+og_image: "/assets/images/og-image.jpg"
+---</code></pre>
+        </div>
+        
+        <h3>Performance Optimization</h3>
+        <ul>
+            <li>Compressed CSS and JavaScript</li>
+            <li>Optimized images with lazy loading</li>
+            <li>Minified HTML output</li>
+            <li>Critical CSS inlining</li>
+        </ul>
+        
+        <h3>Accessibility</h3>
+        <ul>
+            <li>Semantic HTML structure</li>
+            <li>ARIA labels and roles</li>
+            <li>Keyboard navigation support</li>
+            <li>High contrast color ratios</li>
+        </ul>
+    </section>
+    
+    <section class="doc-section">
+        <h2>❓ FAQ</h2>
+        
+        <div class="faq-item">
+            <h4>How do I add a new component?</h4>
+            <p>Create a new file in the <code>_includes</code> directory and use Jekyll's include syntax to add it to your pages.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Can I customize the colors?</h4>
+            <p>Yes! Edit the CSS variables in <code>_sass/main.scss</code> or override them in your custom CSS.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>How do I add custom JavaScript?</h4>
+            <p>Add your JavaScript files to the <code>assets/js</code> directory and include them in your layout files.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Is the theme mobile responsive?</h4>
+            <p>Yes! All components are built with a mobile-first approach and work perfectly on all devices.</p>
+        </div>
+    </section>
+</div>
+
+<style>
+.documentation {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.doc-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--background-light);
+    border-radius: 0.75rem;
+}
+
+.doc-section {
+    margin: 3rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doc-section:last-child {
+    border-bottom: none;
+}
+
+.doc-section h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.code-block {
+    background: var(--text-color);
+    color: white;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.code-block code {
+    background: none;
+    color: inherit;
+    font-size: 0.875rem;
+}
+
+.component-doc {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.parameters {
+    margin-top: 1rem;
+}
+
+.parameters h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.parameters ul {
+    margin-left: 1rem;
+}
+
+.parameters li {
+    margin-bottom: 0.25rem;
+}
+
+.parameters code {
+    background: white;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.faq-item h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--text-light);
+}
+</style>

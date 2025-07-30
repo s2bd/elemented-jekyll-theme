@@ -1,0 +1,32 @@
+{% assign hero_class = "hero" %}
+{% if include.size == "large" %}
+  {% assign hero_class = hero_class | append: " hero-large" %}
+{% endif %}
+{% if include.background_image %}
+  {% assign hero_class = hero_class | append: " hero-image" %}
+{% endif %}
+
+<section class="{{ hero_class }}"{% if include.background_image %} style="background-image: url('{{ include.background_image }}')"{% endif %}>
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ include.title | default: page.hero_title | default: page.title }}</h1>
+            {% if include.subtitle or page.hero_subtitle %}
+            <p>{{ include.subtitle | default: page.hero_subtitle }}</p>
+            {% endif %}
+            
+            {% if include.buttons or page.hero_buttons %}
+            <div class="hero-buttons">
+                {% if include.buttons %}
+                  {% for button in include.buttons %}
+                  <a href="{{ button.url }}" class="btn{% if button.style %} btn-{{ button.style }}{% endif %}">{{ button.text }}</a>
+                  {% endfor %}
+                {% else %}
+                  {% for button in page.hero_buttons %}
+                  <a href="{{ button.url }}" class="btn{% if button.style %} btn-{{ button.style }}{% endif %}">{{ button.text }}</a>
+                  {% endfor %}
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

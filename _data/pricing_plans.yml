@@ -1,0 +1,41 @@
+- name: "Starter"
+  price: 0
+  period: "forever"
+  description: "Perfect for personal projects"
+  features:
+    - "50+ Components"
+    - "Basic Layouts"
+    - "Community Support"
+    - "Documentation"
+  button_text: "Get Started"
+  url: "/download/"
+
+- name: "Professional"
+  price: 49
+  period: "one-time"
+  description: "Ideal for client projects"
+  featured: true
+  badge: "Most Popular"
+  features:
+    - "200+ Components"
+    - "All Layouts"
+    - "Priority Support"
+    - "Advanced Features"
+    - "Commercial License"
+    - "Lifetime Updates"
+  button_text: "Buy Now"
+  url: "/purchase/"
+
+- name: "Agency"
+  price: 199
+  period: "one-time"
+  description: "For agencies and teams"
+  features:
+    - "Everything in Professional"
+    - "Multi-site License"
+    - "Custom Components"
+    - "1-on-1 Support"
+    - "White-label Rights"
+    - "Source Files"
+  button_text: "Contact Sales"
+  url: "/contact/"

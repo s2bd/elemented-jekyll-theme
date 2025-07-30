@@ -1,0 +1,16 @@
+<section class="cta-section">
+    <div class="container">
+        <h2>{{ include.title }}</h2>
+        {% if include.subtitle %}
+        <p>{{ include.subtitle }}</p>
+        {% endif %}
+        
+        <div class="cta-buttons">
+            {% for button in include.buttons %}
+            <a href="{{ button.url }}" class="btn{% if button.style %} btn-{{ button.style }}{% endif %}">
+                {{ button.text }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+- text: "Get Started"
+  url: "/docs/"
+  style: "primary"
+- text: "View Components"
+  url: "/components/"
+  style: "outline"
